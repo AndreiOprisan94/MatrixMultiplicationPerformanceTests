@@ -2,9 +2,9 @@
 
 source ./initial_setup.sh
 
-MPI_PROCESSES=7
+MPI_PROCESSES=8
 
-for (( MATRIX_DIMENSION=${MATRIX_DIMENSION_START}; MATRIX_DIMENSION<=${MAX_MATRIX_DIMENSION}; MATRIX_DIMENSION+=${MATRIX_DIMENSION_STEP} )); do
+for (( MATRIX_DIMENSION=${MATRIX_DIMENSION_START}; MATRIX_DIMENSION<=${MAX_MATRIX_DIMENSION}; MATRIX_DIMENSION = MATRIX_DIMENSION * 2 )); do
     echo "===================================================================================================================================================="
     echo "Testing with square matrix of dimension $MATRIX_DIMENSION and $MPI_PROCESSES number of MPI processes"
     echo
